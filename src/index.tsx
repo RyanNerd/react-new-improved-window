@@ -31,10 +31,10 @@ interface IProps extends PropsWithChildren<any> {
 }
 
 /**
- * NewImprovedWindow component
+ * Index component
  * @param {IProps} props
  */
-const NewImprovedWindow = (props: IProps) => {
+const Index = (props: IProps) => {
     const {
         url = '',
         name = '',
@@ -295,4 +295,4 @@ const NewImprovedWindow = (props: IProps) => {
     return null;
 }
 
-export default NewImprovedWindow;
+export default Index;

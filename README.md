@@ -36,13 +36,13 @@ import React from 'react'
 import NewWindow from 'react-new-improved-window'
 
 const Demo = () => (
-  <NewImprovedWindow>
+  <Index>
     <h1>Hi 👋</h1>
-  </NewImprovedWindow>
+  </Index>
 )
 ```
 
-When **`<NewImprovedWindow />`** is mounted a popup window will be opened. When unmounted then the popup will be closed.
+When **`<Index />`** is mounted a popup window will be opened. When unmounted then the popup will be closed.
 
 The `children` contents is what will be rendered into the new popup window. In that case `Hi 👋` will be the content. The content can include any react-stateful code.
 
