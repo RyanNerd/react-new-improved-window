@@ -33,7 +33,7 @@ npm i react-new-improved-window --save
 
 ```js
 import React from 'react'
-import NewWindow from 'react-new-window'
+import NewWindow from 'react-new-improved-window'
 
 const Demo = () => (
   <NewImprovedWindow>
