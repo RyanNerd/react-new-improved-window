@@ -13,11 +13,12 @@ function App() {
                     setShow(!show)
                 }}
             >
-                Show New Improved Window
+                <span>{show ? "Hide" : "Show"} New Improved Window</span>
             </button>
 
             {show &&
             <NewImprovedWindow
+                center="parent"
                 onUnload={() => setShow(false)}
             >
                 <h1>Just a test</h1>
