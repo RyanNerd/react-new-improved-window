@@ -20,5 +20,8 @@
   "peerDependencies": {
     "react": "^16.0.0 || ^17.0.2",
     "react-dom": "^16.0.0 || ^17.0.2"
-  }
+  },
+  "files": [
+    "/lib"
+  ]
 }
