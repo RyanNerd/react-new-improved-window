@@ -2,6 +2,12 @@
   "name": "react-new-improved-window",
   "version": "0.1.0",
   "description": "React component to invoke a new window",
+  "keywords": [
+    "react",
+    "window",
+    "open",
+    "popup"
+  ],
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
