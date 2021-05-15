@@ -23,7 +23,12 @@ interface IProps extends PropsWithChildren<any> {
     onOpen?: (w: Window) => void;
     onUnload?: () => void;
     center?: 'parent' | 'screen';
+    copyStyles?: boolean;
     closeWithParent?: boolean;
 }
+/**
+ * NewImprovedWindow component
+ * @param {IProps} props
+ */
 declare const NewImprovedWindow: (props: IProps) => import("react").ReactPortal | null;
 export default NewImprovedWindow;
