@@ -18,7 +18,6 @@ function App() {
 
             {show &&
             <NewImprovedWindow
-                center="parent"
                 onUnload={() => setShow(false)}
             >
                 <h1>Just a test</h1>
