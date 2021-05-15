@@ -1,6 +1,6 @@
 {
   "name": "react-new-improved-window",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component to invoke a new window",
   "keywords": [
     "react",
