@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier",
+    "tslint-react-hooks"
+  ],
+  "rules": {
+    "max-line-length": {
+      "options": [120]
+    },
+    "indent": [true, "spaces", 4],
+    "no-console": false,
+    "no-shadowed-variable": false,
+    "radix": false
+  }
+}

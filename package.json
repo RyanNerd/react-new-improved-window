@@ -14,7 +14,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "lint": "tslint -p tsconfig.json"
   },
   "author": "Ryan Jentzsch",
   "license": "MIT",
@@ -26,6 +27,12 @@
   "peerDependencies": {
     "react": "^16.0.0 || ^17.0.2",
     "react-dom": "^16.0.0 || ^17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react-hooks": "^2.2.2"
   },
   "files": [
     "/lib"
