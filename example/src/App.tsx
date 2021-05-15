@@ -18,13 +18,15 @@ function App() {
 
             {show &&
             <NewImprovedWindow
+                center="parent"
                 onUnload={() => setShow(false)}
+                closeWithParent={true}
             >
-                <h1>Just a test</h1>
+                <h1>Example Window Popup!</h1>
             </NewImprovedWindow>
             }
         </>
-    );
+    )
 }
 
 export default App;

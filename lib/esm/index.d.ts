@@ -12,6 +12,7 @@ interface IFeatures {
     scrollbars?: boolean;
     noopener?: boolean;
     noreferrer?: boolean;
+    [k: string]: any;
 }
 interface IProps extends PropsWithChildren<any> {
     url?: string;
@@ -19,7 +20,10 @@ interface IProps extends PropsWithChildren<any> {
     title?: string;
     features?: IFeatures;
     onBlock?: () => void;
-    onOpen?: () => void;
+    onOpen?: (w: Window) => void;
+    onUnload?: () => void;
+    center?: 'parent' | 'screen';
+    closeWithParent?: boolean;
 }
 declare const NewImprovedWindow: (props: IProps) => import("react").ReactPortal | null;
 export default NewImprovedWindow;
