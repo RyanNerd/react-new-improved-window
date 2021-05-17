@@ -27,8 +27,8 @@ interface IProps extends PropsWithChildren<any> {
     closeWithParent?: boolean;
 }
 /**
- * Index component
+ * NewImprovedWindow component
  * @param {IProps} props
  */
-declare const Index: (props: IProps) => import("react").ReactPortal | null;
-export default Index;
+declare const NewImprovedWindow: (props: IProps) => import("react").ReactPortal | null;
+export default NewImprovedWindow;

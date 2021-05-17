@@ -14,6 +14,7 @@ interface IFeatures {
     scrollbars?: boolean,
     noopener?: boolean,
     noreferrer?: boolean,
+
     [k: string]: any
 }
 
@@ -31,10 +32,10 @@ interface IProps extends PropsWithChildren<any> {
 }
 
 /**
- * Index component
+ * NewImprovedWindow component
  * @param {IProps} props
  */
-const Index = (props: IProps) => {
+const NewImprovedWindow = (props: IProps) => {
     const {
         url = '',
         name = '',
@@ -86,7 +87,6 @@ const Index = (props: IProps) => {
         }
     }
 
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         /**
@@ -115,7 +115,7 @@ const Index = (props: IProps) => {
          */
         const cloneStyles = (source: Document, target: Document) => {
             // Store style tags, avoid reflow in the loop
-            const headFrag = target.createDocumentFragment()
+            const headFrag = target.createDocumentFragment();
 
             Array.from(source.styleSheets).forEach(styleSheet => {
                 // For <style> elements
@@ -164,7 +164,6 @@ const Index = (props: IProps) => {
                 } else if (styleSheet.href) {
                     // for <link> elements loading CSS from a URL
                     const newLinkEl = target.createElement('link');
-
                     newLinkEl.rel = 'stylesheet';
                     newLinkEl.href = styleSheet.href;
                     headFrag.appendChild(newLinkEl);
@@ -182,9 +181,9 @@ const Index = (props: IProps) => {
         const getKeyFrameText = (cssRule: CSSKeyframesRule): string => {
             const tokens = ['@keyframes', cssRule.name, '{'];
             Array.from(cssRule.cssRules)
-                 .forEach((cssRule: CSSKeyframeRule) => {
+                .forEach((cssRule: CSSKeyframeRule) => {
                     tokens.push(cssRule.keyText, '{', cssRule.style.cssText, '}');
-                 });
+                });
             tokens.push('}');
             return tokens.join(' ');
         }
@@ -290,4 +289,4 @@ const Index = (props: IProps) => {
     return null;
 }
 
-export default Index;
+export default NewImprovedWindow;
