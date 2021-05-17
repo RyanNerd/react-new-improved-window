@@ -49,8 +49,11 @@ const Index = (props: IProps) => {
         children
     } = props;
 
+    // Popup window blocked state
+    const [isBlocked, setIsBlocked] = useState(false);
+
     // We need a container element for createPortal()
-    const [container, setContainer] = useState(document.createElement('div'));
+    const [container] = useState(document.createElement('div'));
 
     // We need to override features in some cases so we make a mutable copy.
     const mutFeatures = {...features} as IFeatures;
@@ -139,11 +142,11 @@ const Index = (props: IProps) => {
                             return;
                         }
 
-                        let returnText = '';
+                        let returnText: string;
                         if (type === CSSRule.KEYFRAMES_RULE) {
                             // IE11 will throw error when trying to access cssText property, so we
                             // need to assemble them
-                            returnText = getKeyFrameText(cssRule);
+                            returnText = getKeyFrameText(cssRule as CSSKeyframesRule);
                         } else if ([CSSRule.IMPORT_RULE, CSSRule.FONT_FACE_RULE].includes(type)) {
                             // Check if the cssRule type is CSSImportRule (3) or CSSFontFaceRule (5)
                             // to handle local imports on a about:blank page
@@ -176,13 +179,12 @@ const Index = (props: IProps) => {
          * @param {CSSRule} cssRule
          * @return {string}
          */
-        const getKeyFrameText = (cssRule: any) => {
+        const getKeyFrameText = (cssRule: CSSKeyframesRule): string => {
             const tokens = ['@keyframes', cssRule.name, '{'];
-            Array.from(cssRule.cssRules).forEach(cssRule => {
-                // type === CSSRule.KEYFRAME_RULE should always be true
-                // @ts-ignore
-                tokens.push(cssRule.keyText, '{', cssRule.style.cssText, '}');
-            })
+            Array.from(cssRule.cssRules)
+                 .forEach((cssRule: CSSKeyframeRule) => {
+                    tokens.push(cssRule.keyText, '{', cssRule.style.cssText, '}');
+                 });
             tokens.push('}');
             return tokens.join(' ');
         }
@@ -258,9 +260,7 @@ const Index = (props: IProps) => {
             if (onBlock) {
                 onBlock();
             }
-
-            // @ts-ignore Set the container to null to flag the component as blocked.
-            setContainer(null);
+            setIsBlocked(true);
         }
 
         // Clean up
@@ -282,11 +282,11 @@ const Index = (props: IProps) => {
     }, [])
 
     // If the window popup was created then open the window in a portal.
-    if (container) {
+    if (!isBlocked) {
         return ReactDOM.createPortal(children, container);
     }
 
-    // Unable to create popup window return null
+    // Unable to create popup window so return null
     return null;
 }
 
