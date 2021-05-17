@@ -93,7 +93,7 @@ const Index = (props: IProps) => {
          */
         const toWindowFeatures = (obj: IFeatures) => {
             return Object.keys(obj)
-                .reduce((features, name) => {
+                .reduce((features: string[], name) => {
                     const value = obj[name];
                     if (typeof value === 'boolean') {
                         features.push(`${name}=${value ? 'yes' : 'no'}`);
