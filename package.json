@@ -1,6 +1,6 @@
 {
   "name": "react-new-improved-window",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "React component to invoke a new window",
   "keywords": [
     "react",
@@ -14,7 +14,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "lint": "tslint -p tsconfig.json"
   },
   "author": "Ryan Jentzsch",
