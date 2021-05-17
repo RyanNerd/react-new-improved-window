@@ -11,11 +11,13 @@
 - **Support the full `window.open` api**.
 - **Built for React 16 and 17** (uses `ReactDOM.createPortal`).
 - **Handler for blocked popups** (via `onBlock` prop).
+- **Handler for created popups** (via `onOpen` prop)  
 - **Center popups** according to the parent _window_ or _screen_.
 - **No external dependencies** Only React 16 or 17 as a _peer_ dependency.
 
 ### What's different from `react-new-window`?
 - Codebase has been rewritten in TypeScript with many bugs discovered and fixed in the process.
+- Codebase uses React hooks making `react-new-improved-window` functionally declarative.
 - `closeWithParent` property indicating to close the new window when the parent window closes.
 - Installation doesn't require the `--force` switch since **both** React 16 and 17 are supported.
 - If the `title` property is missing the new window will use the parent window's title.
@@ -96,6 +98,6 @@ See: `example/src/App.tsx`
 
 Special thanks to [Rubens Mariuzzo](https://github.com/rmariuzzo).
 
-[MIT License](LICENSE)
+[MIT License](https://github.com/RyanNerd/react-new-improved-window/blob/236e29c2fda51b58f4ad0ea30f8c0e5592a23861/LICENSE.md)
 
  </div>
