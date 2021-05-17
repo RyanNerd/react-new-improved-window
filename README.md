@@ -35,7 +35,7 @@ npm i react-new-improved-window --save
 
 ```js
 import React from 'react'
-import NewWindow from 'react-new-improved-window'
+import NewImprovedWindow from 'react-new-improved-window'
 
 const Demo = () => (
   <Index>
@@ -98,6 +98,6 @@ See: `example/src/App.tsx`
 
 Special thanks to [Rubens Mariuzzo](https://github.com/rmariuzzo).
 
-[MIT License](https://github.com/RyanNerd/react-new-improved-window/blob/236e29c2fda51b58f4ad0ea30f8c0e5592a23861/LICENSE.md)
+[MIT License](https://github.com/RyanNerd/react-new-improved-window/blob/c7204b5f7fbff744996e7ff4fc527d157215f30b/LICENSE.md)
 
  </div>
