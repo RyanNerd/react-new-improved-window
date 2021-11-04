@@ -1,6 +1,6 @@
 {
   "name": "react-new-improved-window",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "React component to invoke a new window",
   "keywords": [
     "react",
@@ -9,7 +9,7 @@
     "popup"
   ],
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
