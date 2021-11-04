@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 interface IFeatures {
     width?: number;
     height?: number;
@@ -22,7 +22,7 @@ interface IProps extends PropsWithChildren<any> {
     onBlock?: () => void;
     onOpen?: (w: Window) => void;
     onUnload?: () => void;
-    center?: 'parent' | 'screen';
+    center?: "parent" | "screen";
     copyStyles?: boolean;
     closeWithParent?: boolean;
 }
